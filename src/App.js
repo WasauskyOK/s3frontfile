@@ -1,24 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+
+  // function ObtenerFile(e){
+  //   e.preventDefault();
+  //   //let data=document.querySelector("input[type=file]");
+  //   //let data=document.getElementsByName('archivo').values();
+  //   var url = document.getElementById('inputFile').files[0];
+  //   console.log(url);
+  // }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <img src="C:/Users/user/Desktop/ProyectosReact/multernode/backend/uploads/images/macwindow.jpg"
+      alt=''
+      style={{width:'750px',height:'500px'}}
+     />
+      <form action='http://localhost:5556/file' method='POST' encType="multipart/form-data">
+        <input type='file' name='archivo'  />
+        <button type='submit'>Subir Archivo :D </button>
+      </form>
     </div>
   );
 }
